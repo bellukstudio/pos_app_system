@@ -23,8 +23,14 @@
                  <li>
                      <hr class="dropdown-divider" />
                  </li>
-                 <li><a class="dropdown-item" href="#!">Logout</a></li>
-             </ul>
+                 <li>
+                     <form action="{{ route('logout') }}" method="post" class="dropdown-item">
+                         @csrf
+                         <button type="submit" class="btn" style="width: 100%;border:none;">
+                             <h8 class="float-start">Keluar</h8>
+                         </button>
+                     </form>
+                 </li>
          </li>
      </ul>
  </nav>
