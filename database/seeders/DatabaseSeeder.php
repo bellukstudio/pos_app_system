@@ -13,7 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RoleSedeer::class,
-            AccountSeeder::class
+            AccountSeeder::class,
+            CategoryMerchantSeeder::class
         ]);
     }
 }

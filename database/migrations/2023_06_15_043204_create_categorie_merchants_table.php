@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('categorie_merchants', function (Blueprint $table) {
             $table->id();
             $table->string('categoryMerchant');
+            $table->string('type');
             $table->timestamps();
         });
     }

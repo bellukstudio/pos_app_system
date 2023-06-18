@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DirectRootController;
+use App\Http\Controllers\Merchant\MerchantController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +30,14 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth:sanctum', 'web'])->group(function () {
     Route::get('/dashboard', [DirectRootController::class, 'dashboard'])->name('dashboard');
+    /**
+     * [Route Merchant Profile]
+     */
+    Route::controller(MerchantController::class)->group(function () {
+        Route::get('merchant-profile', 'index')->name('merchant-profile');
+        Route::post('merchant-profile/save', 'createAndUpdate')->name('merchant-save');
+    });
+    /**
+     * [End Route Merchant Profile]
+     */
 });
