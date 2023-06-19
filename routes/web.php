@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DirectRootController;
 use App\Http\Controllers\Merchant\MerchantController;
+use App\Http\Controllers\Role\RolesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,5 +40,12 @@ Route::middleware(['auth:sanctum', 'web'])->group(function () {
     });
     /**
      * [End Route Merchant Profile]
+     */
+    /**
+     * [Route Roles Management]
+     */
+    Route::resource('roles-management', RolesController::class)->except(['show', 'edit']);
+    /**
+     * [End Route Roles Management]
      */
 });

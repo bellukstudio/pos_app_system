@@ -15,14 +15,9 @@
                     Profile
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">User Management</div>
-                <a class="nav-link" href="charts.html">
-                    <div class="sb-nav-link-icon"><i class="fas fa-person"></i></div>
-                    Users
-                </a>
-                {{-- HEAD --}}
                 <div class="sb-sidenav-menu-heading">Roles Management</div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link {{ Route::is('roles-management*') ? 'active' : '' }}"
+                    href="{{ route('roles-management.index') }}">
                     <div class="sb-nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-person-workspace" viewBox="0 0 16 16">
@@ -38,6 +33,13 @@
                     </div>
                     Roles
                 </a>
+                {{-- HEAD --}}
+                <div class="sb-sidenav-menu-heading">User Management</div>
+                <a class="nav-link" href="charts.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-person"></i></div>
+                    Users
+                </a>
+
                 {{-- HEAD --}}
                 <div class="sb-sidenav-menu-heading">Product Management</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
