@@ -49,7 +49,7 @@ class RolesController extends Controller
                 'rolesName' => $request->rolesName
             ]);
 
-            return redirect()->route('roles-management.index')->with('success', 'Data Saved!');
+            return redirect()->route('roles-management.index')->with('success', __('alert.saved'));
         } catch (\Throwable $e) {
             return back()->withException($e);
         }
@@ -91,7 +91,7 @@ class RolesController extends Controller
             $rolesData->rolesName = $request->rolesName;
             $rolesData->update();
 
-            return redirect()->route('roles-management.index')->with('success', 'Data updated!');
+            return redirect()->route('roles-management.index')->with('success', __('alert.updated'));
         } catch (\Throwable $e) {
             return back()->withException($e);
         }
@@ -106,7 +106,7 @@ class RolesController extends Controller
             $rolesData = MasterRoles::find($id);
             $rolesData->delete();
 
-            return redirect()->route('roles-management.index')->with('success', 'Data deleted!');
+            return redirect()->route('roles-management.index')->with('success', __('alert.deleted'));
         } catch (\Throwable $e) {
             return back()->withException($e);
         }

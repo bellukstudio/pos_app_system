@@ -29,17 +29,5 @@ class ProfileRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'merchantName.required' => 'The store name must be filled in',
-            'merchantName.max' => 'Maximum store name is 100 letters',
-            //
-            'merchantAddress.required' => 'The store address is required',
-            //
-            'merchantFounder.required' => 'The name of the Owner of the store must be filled in',
-            //
-            'categoryMerchant.required' => 'Store category required'
-        ];
-    }
+   
 }

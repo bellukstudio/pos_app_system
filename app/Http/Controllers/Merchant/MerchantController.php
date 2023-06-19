@@ -50,7 +50,7 @@ class MerchantController extends Controller
                     'founder' => $request->merchantFounder
                 ]);
             }
-            return redirect()->route('merchant-profile')->with('success', 'Data saved!');
+            return redirect()->route('merchant-profile')->with('success', __('alert.saved'));
         } catch (\Exception $e) {
             return back()->withErrors($e);
         }

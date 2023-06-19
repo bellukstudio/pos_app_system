@@ -26,12 +26,5 @@ class RolesRequest extends FormRequest
         ];
     }
 
-    public function messages()
-    {
-        return [
-            'rolesName.required' => 'The roles name must be filled in',
-            'rolesName.max' => 'Maximum store name is 20 letters',
-            'rolesName.unique' => 'Roles name is already saved',
-        ];
-    }
+ 
 }

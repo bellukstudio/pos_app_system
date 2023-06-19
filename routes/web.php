@@ -5,6 +5,7 @@ use App\Http\Controllers\DirectRootController;
 use App\Http\Controllers\Merchant\MerchantController;
 use App\Http\Controllers\Role\RolesController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,17 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
  * [End Route Auth]
  */
 
+/**
+ * [Route Locale]
+ */
+
+Route::get('locale/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+/**
+ * [End Route Locale]
+ */
 
 Route::middleware(['auth:sanctum', 'web'])->group(function () {
     Route::get('/dashboard', [DirectRootController::class, 'dashboard'])->name('dashboard');
