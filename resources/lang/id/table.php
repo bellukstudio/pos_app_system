@@ -7,7 +7,16 @@ return [
     /**
      * [End Page Roles]
      */
-
+    /**
+     * [Page Users]
+     */
+    'fullName' => 'Nama Lengkap',
+    'email' => 'Email',
+    'photo' => 'Foto',
+    'password' => 'Kata sandi',
+    /**
+     * [End Page Users]
+     */
     /**
      * [General text]
      */

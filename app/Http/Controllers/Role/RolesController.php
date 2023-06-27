@@ -37,7 +37,6 @@ class RolesController extends Controller
         $validator = Validator::make(
             $request->all(),
             $request->rules(),
-            $request->messages()
         );
 
         if ($validator->fails()) {
@@ -51,7 +50,8 @@ class RolesController extends Controller
 
             return redirect()->route('roles-management.index')->with('success', __('alert.saved'));
         } catch (\Throwable $e) {
-            return back()->withException($e);
+            return back()->with('failed', $e->getMessage())->withInput();
+
         }
     }
 
@@ -79,7 +79,6 @@ class RolesController extends Controller
         $validator = Validator::make(
             $request->all(),
             $request->rules(),
-            $request->messages()
         );
 
         if ($validator->fails()) {
@@ -93,7 +92,8 @@ class RolesController extends Controller
 
             return redirect()->route('roles-management.index')->with('success', __('alert.updated'));
         } catch (\Throwable $e) {
-            return back()->withException($e);
+            return back()->with('failed', $e->getMessage())->withInput();
+
         }
     }
 
@@ -108,7 +108,8 @@ class RolesController extends Controller
 
             return redirect()->route('roles-management.index')->with('success', __('alert.deleted'));
         } catch (\Throwable $e) {
-            return back()->withException($e);
+            return back()->with('failed', $e->getMessage())->withInput();
+
         }
     }
 }

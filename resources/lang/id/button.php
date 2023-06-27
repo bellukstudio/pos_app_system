@@ -5,4 +5,6 @@ return [
     'update' => 'Ubah',
     'delete' => 'Hapus',
     'add' => 'Tambah',
+    'close' => 'Tutup'
+
 ];

@@ -12,5 +12,12 @@ return [
     'suppliers' => 'Pemasok',
     'members' => 'Keanggotaan',
     'promo' => 'Promo',
-
+    'merchantProfile' => 'Profil Toko',
+    'manageRoles' => 'Manajemen Peran',
+    'manageUsers' => 'Manajemen Pengguna',
+    'manageProducts' => 'Manajemen Produk',
+    'manageTransaction' => 'Manajemen Transaksi',
+    'manageSuppliers' => 'Manajemen Pemasok',
+    'manageMembers' => 'Manajemen Keanggotaan',
+    'managePromo' => 'Manajemen Promo',
 ];

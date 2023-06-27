@@ -33,8 +33,8 @@
             </div>
             <div class="card mt-5">
                 <div class="card-header">
-                    <h8>Data {{ __('page-roles.roles') }}</h8>
-                    <a href="" class="btn btn-primary mr-4" data-bs-toggle="modal"
+                    Data {{ __('page-roles.roles') }}
+                    <a href="#" class="btn btn-primary mr-4" data-bs-toggle="modal"
                         data-bs-target="#modalAdd">{{ __('button.add') }} <i class="fas fa-add"></i></a>
                 </div>
                 {{-- MODAL ADD --}}
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('button.close') }}</button>
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('button.save') }} Data</button>
                                 </div>
@@ -138,7 +138,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Close</button>
+                                                        data-bs-dismiss="modal">{{ __('button.close') }}</button>
                                                     <button type="submit" class="btn btn-primary">
                                                         {{ __('button.save') }}
                                                         Data</button>
@@ -169,7 +169,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
+                                                    data-bs-dismiss="modal">{{ __('button.close') }}</button>
                                                 <form action="{{ route('roles-management.destroy', $roles->id) }}"
                                                     method="post" class="ml-auto">
                                                     @csrf
