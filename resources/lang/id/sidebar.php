@@ -1,0 +1,23 @@
+<?php
+return [
+    'core' => 'Inti',
+    'dashboard' => 'Dasbor',
+    'profile' => 'Profil',
+    'merchant' => 'Toko',
+    'roles' => 'Peran',
+    'management' => 'Manajemen',
+    'users' => 'Pengguna',
+    'products' => 'Produk',
+    'transaction' => 'Transaksi',
+    'suppliers' => 'Pemasok',
+    'members' => 'Keanggotaan',
+    'promo' => 'Promo',
+    'merchantProfile' => 'Profil Toko',
+    'manageRoles' => 'Manajemen Peran',
+    'manageUsers' => 'Manajemen Pengguna',
+    'manageProducts' => 'Manajemen Produk',
+    'manageTransaction' => 'Manajemen Transaksi',
+    'manageSuppliers' => 'Manajemen Pemasok',
+    'manageMembers' => 'Manajemen Keanggotaan',
+    'managePromo' => 'Manajemen Promo',
+];

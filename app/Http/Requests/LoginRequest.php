@@ -26,14 +26,4 @@ class LoginRequest extends FormRequest
             'password' => 'required'
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'email.required' => 'Email must be filled in',
-            'email.email' => 'Email format is not correct',
-            //
-            'password.required' => 'Password required'
-        ];
-    }
 }

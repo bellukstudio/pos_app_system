@@ -4,7 +4,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DirectRootController;
 use App\Http\Controllers\Merchant\MerchantController;
 use App\Http\Controllers\Role\RolesController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,17 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
  * [End Route Auth]
  */
 
+/**
+ * [Route Locale]
+ */
+
+Route::get('locale/{locale}', function ($locale) {
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+/**
+ * [End Route Locale]
+ */
 
 Route::middleware(['auth:sanctum', 'web'])->group(function () {
     Route::get('/dashboard', [DirectRootController::class, 'dashboard'])->name('dashboard');
@@ -44,8 +57,16 @@ Route::middleware(['auth:sanctum', 'web'])->group(function () {
     /**
      * [Route Roles Management]
      */
-    Route::resource('roles-management', RolesController::class)->except(['show', 'edit']);
+    Route::resource('roles-management', RolesController::class)->except(['show', 'edit', 'create']);
     /**
      * [End Route Roles Management]
+     */
+    /**
+     * [Route User Management]
+     */
+    Route::get('users-management/deleteImg', [UserController::class, 'deleteImage']);
+    Route::resource('users-management', UserController::class)->except(['show', 'edit', 'create']);
+    /**
+     * [End Route User Management]
      */
 });

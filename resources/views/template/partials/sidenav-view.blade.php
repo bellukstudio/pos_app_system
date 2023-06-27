@@ -2,20 +2,20 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" d="sidenavAccordion" aria-label="sidenav">
         <div class="sb-sidenav-menu">
             <div class="nav">
-                <div class="sb-sidenav-menu-heading">Core</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.core') }}</div>
                 <a class="nav-link {{ Route::is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Dashboard
+                    {{ __('sidebar.dashboard') }}
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Merchant Profile</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.merchantProfile') }}</div>
                 <a class="nav-link {{ Route::is('merchant-profile') ? 'active' : '' }}"
                     href="{{ route('merchant-profile') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-shop"></i></div>
-                    Profile
+                    {{ __('sidebar.profile') }}
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Roles Management</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageRoles') }}</div>
                 <a class="nav-link {{ Route::is('roles-management*') ? 'active' : '' }}"
                     href="{{ route('roles-management.index') }}">
                     <div class="sb-nav-link-icon">
@@ -31,21 +31,22 @@
                                 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z" />
                         </svg>
                     </div>
-                    Roles
+                    {{ __('sidebar.roles') }}
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">User Management</div>
-                <a class="nav-link" href="charts.html">
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageUsers') }}</div>
+                <a class="nav-link {{ Route::is('users-management*') ? 'active' : '' }}"
+                    href="{{ route('users-management.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-person"></i></div>
-                    Users
+                    {{ __('sidebar.users') }}
                 </a>
 
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Product Management</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageProducts') }}</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                     aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
-                    Product
+                    {{ __('sidebar.products') }}
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
@@ -57,7 +58,7 @@
                     </nav>
                 </div>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Supplier Management</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageSuppliers') }}</div>
                 <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -71,10 +72,10 @@
                                 0 0-5 2.5 2.5 0 0 0 0 5Z" />
                         </svg>
                     </div>
-                    Suppliers
+                    {{ __('sidebar.suppliers') }}
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Transaction Management</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageTransaction') }}</div>
                 <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -93,10 +94,10 @@
                                 0v-3a.5.5 0 0 1 .5-.5z" />
                         </svg>
                     </div>
-                    Transactions
+                    {{ __('sidebar.transaction') }}
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Member Management</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageMembers') }}</div>
                 <a class="nav-link" href="charts.html">
                     <div class="sb-nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -110,10 +111,10 @@
                                 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z" />
                         </svg>
                     </div>
-                    Members
+                    {{ __('sidebar.members') }}
                 </a>
                 {{-- HEAD --}}
-                <div class="sb-sidenav-menu-heading">Promo Management</div>
+                <div class="sb-sidenav-menu-heading">{{ __('sidebar.managePromo') }}</div>
                 <a class="nav-link mb-5" href="charts.html">
                     <div class="sb-nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -156,7 +157,7 @@
                                 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
                         </svg>
                     </div>
-                    Promo
+                    {{ __('sidebar.promo') }}
                 </a>
             </div>
         </div>
