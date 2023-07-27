@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UserRequest;
-use App\Http\Requests\UserUpdateRequest;
+use App\Http\Requests\User\UserRequest;
+use App\Http\Requests\User\UserUpdateRequest;
 use App\Models\MasterRoles;
 use App\Models\MasterUser;
 use Illuminate\Http\RedirectResponse;

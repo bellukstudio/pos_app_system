@@ -40,21 +40,23 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-person"></i></div>
                     {{ __('sidebar.users') }}
                 </a>
-
                 {{-- HEAD --}}
                 <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageProducts') }}</div>
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
-                    aria-expanded="false" aria-controls="collapseLayouts">
+                <a class="nav-link {{ Request::is(['product-category*']) ? '' : 'collapsed' }}" href="#"
+                    data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
+                    aria-expanded="{{ Request::is(['product-category*']) ? 'true' : 'false' }}"
+                    aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
                     {{ __('sidebar.products') }}
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
-                    data-bs-parent="#sidenavAccordion">
+                <div class="collapse {{ Request::is(['product-category*']) ? 'show' : '' }}" id="collapseLayouts"
+                    aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Product Category</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Product Purchase</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Product</a>
+                        <a class="nav-link {{ Request::is('product-category*') ? 'active' : '' }}"
+                            href="{{ route('product-category.index') }}">{{ __('sidebar.productCategory') }}</a>
+                        <a class="nav-link" href="layout-sidenav-light.html">{{ __('sidebar.productPurchase') }}</a>
+                        <a class="nav-link" href="layout-sidenav-light.html">{{ __('sidebar.products') }}</a>
                     </nav>
                 </div>
                 {{-- HEAD --}}

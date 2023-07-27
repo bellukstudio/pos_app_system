@@ -86,18 +86,8 @@
                                 <th>{{ __('table.action') }}</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>ID</th>
-                                <th>{{ __('table.fullName') }}</th>
-                                <th>{{ __('table.email') }}</th>
-                                <th>{{ __('table.photo') }}</th>
-                                <th>{{ __('table.rolesName') }}</th>
-                                <th>{{ __('table.action') }}</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
-                            @forelse ($user as  $index => $users)
+                            @foreach ($user as $index => $users)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $users->fullName }}</td>
@@ -234,11 +224,7 @@
                                     </div>
                                 </div>
                                 {{-- ENDMODAL --}}
-                            @empty
-                                <tr>
-                                    <td colspan="6">{{ __('table.noData') }}</td>
-                                </tr>
-                            @endforelse
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

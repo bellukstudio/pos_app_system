@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DirectRootController;
 use App\Http\Controllers\Merchant\MerchantController;
+use App\Http\Controllers\Product\CategoryProductController;
 use App\Http\Controllers\Role\RolesController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -68,5 +69,12 @@ Route::middleware(['auth:sanctum', 'web'])->group(function () {
     Route::resource('users-management', UserController::class)->except(['show', 'edit', 'create']);
     /**
      * [End Route User Management]
+     */
+    /**
+     * [Route Product Category]
+     */
+    Route::resource('product-category', CategoryProductController::class)->except(['show', 'edit', 'create']);
+    /**
+     * [End Route Product Category]
      */
 });

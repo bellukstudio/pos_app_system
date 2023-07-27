@@ -18,6 +18,13 @@ return [
      * [End Page Users]
      */
     /**
+     * [Page Category Product]
+     */
+    'categoryName' => 'Category Name',
+    /**
+     * [End Page Category Product]
+     */
+    /**
      * [General text]
      */
     "action" => 'Action',

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Profile;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RolesUpdateRequest extends FormRequest
+class ProfileRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,9 +21,13 @@ class RolesUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
-        $roleId = $this->route('id');
         return [
-            'rolesName' => 'required|unique:master_roles,rolesName,' . $roleId . '|max:20'
+            'merchantName' => 'required|max:100',
+            'merchantAddress' => 'required',
+            'merchantFounder' => 'required',
+            'categoryMerchant' => 'required'
         ];
     }
+
+   
 }

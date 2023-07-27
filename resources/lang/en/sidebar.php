@@ -8,6 +8,8 @@ return [
     'management' => 'Management',
     'users' => 'Users',
     'products' => 'Products',
+    'productCategory' => 'Product Category',
+    'productPurchase' => 'Product Purchase',
     'transaction' => 'Transactions',
     'suppliers' => 'Suppliers',
     'members' => 'Members',

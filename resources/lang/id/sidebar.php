@@ -8,6 +8,8 @@ return [
     'management' => 'Manajemen',
     'users' => 'Pengguna',
     'products' => 'Produk',
+    'productCategory' => 'Produk Kategori',
+    'productPurchase' => 'Produk Pembelian',
     'transaction' => 'Transaksi',
     'suppliers' => 'Pemasok',
     'members' => 'Keanggotaan',

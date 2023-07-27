@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Product;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProfileRequest extends FormRequest
+class ProductCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,12 +22,7 @@ class ProfileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'merchantName' => 'required|max:100',
-            'merchantAddress' => 'required',
-            'merchantFounder' => 'required',
-            'categoryMerchant' => 'required'
+            'categoryName' => 'required|unique:master_categorie_products,categoryName|max:50',
         ];
     }
-
-   
 }

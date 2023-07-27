@@ -18,6 +18,13 @@ return [
      * [End Page Users]
      */
     /**
+     * [Page Category Product]
+     */
+    'categoryName' => 'Nama Kategori',
+    /**
+     * [End Page Category Product]
+     */
+    /**
      * [General text]
      */
     "action" => 'Aksi',
