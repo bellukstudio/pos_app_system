@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\ProductCategoryRequest;
 use App\Http\Requests\Product\ProductCategoryUpdateRequest;
 use App\Models\MasterCategorieProduct;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
@@ -32,7 +33,7 @@ class CategoryProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ProductCategoryRequest $request)
+    public function store(ProductCategoryRequest $request) : RedirectResponse
     {
         $validator = Validator::make(
             $request->all(),
@@ -75,7 +76,7 @@ class CategoryProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(ProductCategoryUpdateRequest $request, string $id)
+    public function update(ProductCategoryUpdateRequest $request, string $id): RedirectResponse
     {
         $validator = Validator::make(
             $request->all(),
@@ -102,7 +103,7 @@ class CategoryProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id): RedirectResponse
     {
         try {
 

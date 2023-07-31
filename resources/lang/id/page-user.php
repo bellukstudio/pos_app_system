@@ -1,6 +1,6 @@
 <?php
 return [
-    'userManage' => 'Manajemen Pengguna',
+    'userManage' => 'Manajemen Data Pengguna',
     'dataUsers' => 'Data Pengguna',
     'addNewUser' => 'Tambah Pengguna Baru',
     'fullName' => 'Nama Lengkap',

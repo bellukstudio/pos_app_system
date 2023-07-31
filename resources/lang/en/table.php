@@ -25,6 +25,15 @@ return [
      * [End Page Category Product]
      */
     /**
+    * [Page Supplier]
+    */
+    'supplierName' => 'Supllier Name',
+    'companyName' => 'Company Name',
+    'phoneNumber' => 'Phone Number',
+    /**
+    * [End Page Supplier]
+    */
+    /**
      * [General text]
      */
     "action" => 'Action',

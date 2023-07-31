@@ -52,7 +52,7 @@
                 </a>
                 <div class="collapse {{ Request::is(['product-category*']) ? 'show' : '' }}" id="collapseLayouts"
                     aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                    <nav class="sb-sidenav-menu-nested nav">
+                    <nav class="sb-sidenav-menu-nested nav" aria-label="">
                         <a class="nav-link {{ Request::is('product-category*') ? 'active' : '' }}"
                             href="{{ route('product-category.index') }}">{{ __('sidebar.productCategory') }}</a>
                         <a class="nav-link" href="layout-sidenav-light.html">{{ __('sidebar.productPurchase') }}</a>
@@ -61,7 +61,7 @@
                 </div>
                 {{-- HEAD --}}
                 <div class="sb-sidenav-menu-heading">{{ __('sidebar.manageSuppliers') }}</div>
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{ route('supplier-management.index') }}">
                     <div class="sb-nav-link-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-people-fill" viewBox="0 0 16 16">

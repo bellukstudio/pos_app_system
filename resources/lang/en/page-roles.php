@@ -4,7 +4,7 @@ return  [
      * [Page Roles]
      */
     'roles' => 'Roles',
-    'roleManage' => 'Roles Management',
+    'roleManage' => 'Roles Data Management',
     'attention' => 'Attention!',
     'r_1' => 'It is forbidden to delete data arbitrarily:',
     'r_1_desc' => 'Delete data only if you are sure that it will not negatively affect the system.<br>

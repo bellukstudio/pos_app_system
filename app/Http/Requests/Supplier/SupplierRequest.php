@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Roles;
+namespace App\Http\Requests\Supplier;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RolesUpdateRequest extends FormRequest
+class SupplierRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,9 +21,10 @@ class RolesUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
-        $roleId = $this->route('roles_management');
         return [
-            'rolesName' => 'required|unique:master_roles,rolesName,' . $roleId . '|max:20'
+            'supplierName' => 'required|max:100|unique:master_suppliers,supplierName',
+            'companyName' => 'required|max:100',
+            'phoneNumber' => 'required|regex:/^\+\d{1,3}\d{1,14}$/'
         ];
     }
 }

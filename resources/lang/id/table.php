@@ -25,6 +25,15 @@ return [
      * [End Page Category Product]
      */
     /**
+     * [Page Supplier]
+     */
+    'supplierName' => 'Nama Pemasuk',
+    'companyName' => 'Nama Peusahaan',
+    'phoneNumber' => 'Nomor Telepon',
+    /**
+     * [End Page Supplier]
+     */
+    /**
      * [General text]
      */
     "action" => 'Aksi',

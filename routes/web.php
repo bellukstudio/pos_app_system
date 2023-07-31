@@ -5,6 +5,7 @@ use App\Http\Controllers\DirectRootController;
 use App\Http\Controllers\Merchant\MerchantController;
 use App\Http\Controllers\Product\CategoryProductController;
 use App\Http\Controllers\Role\RolesController;
+use App\Http\Controllers\Supplier\SupplierController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -76,5 +77,12 @@ Route::middleware(['auth:sanctum', 'web'])->group(function () {
     Route::resource('product-category', CategoryProductController::class)->except(['show', 'edit', 'create']);
     /**
      * [End Route Product Category]
+     */
+    /**
+     * [Route Supplier Management]
+     */
+    Route::resource('supplier-management', SupplierController::class)->except(['show', 'edit', 'create']);
+    /**
+     * [End Route Supplier Management]
      */
 });

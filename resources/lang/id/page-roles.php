@@ -4,7 +4,7 @@ return  [
      * [Page Roles]
      */
     'roles' => 'Peran',
-    'roleManage' => 'Manajemen Peran',
+    'roleManage' => 'Manajemen Data Peran',
     'attention' => 'Perhatian!',
     'r_1' => 'Dilarang menghapus data secara sembarangan:',
     'r_1_desc' => 'Hapus data hanya jika Anda yakin tidak akan berdampak negatif pada sistem.<br>
